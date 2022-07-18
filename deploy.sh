@@ -9,7 +9,7 @@ docker push blatsosinf/multi-worker:latest
 docker push blatsosinf/multi-client:$SHA
 docker push blatsosinf/multi-server:$SHA
 docker push blatsosinf/multi-worker:$SHA
-
+ 
 kubectl apply -f k8s
 kubectl set image deployments/server-deployment server=blatsosinf/multi-server:$SHA
 kubectl set image deployments/client-deployment client=blatsosinf/multi-client:$SHA
